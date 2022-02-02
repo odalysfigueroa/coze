@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/52e2c24040.js" crossorigin="anonymous"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600; 1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<title>My Shopping Cart | Coze </title>
+</head>
+<body>
+    
+        <div class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/white-cozelogo.png" alt="" width = "200px"></a></div>
+                    <nav>
+                        <ul id = "MenuItems">
+                            <li> <a href="index.html">HOME</a></li>
+                            <li> <a href="products.html">PRODUCTS</a></li>
+                            <li> <a href="contact.html">CONTACT</a></li>
+                            <li> <a href="account.html">ACCOUNT</a></li>
+                        </ul>
+                    </nav>
+                    <a href="cart.html"><img src="images/cart2.png" alt="" width = "40px" height="40px"></a>
+                    <img src="images/menu.png" alt="" class ="menu-icon" onclick = "menutoggle()">
+                
+                
+            </div>
+        </div>
+
+<!------------cart items details-------------->
+<div class="small-container cart-page">
+    <h2>My Shopping Cart</h2>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotals</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/show.jpg" alt="" width="100px" height="100px">
+                <div>
+                    <p>Classic Large Circle Mirror</p>
+            
+                    <small>Price: $120.00</small>
+                    <br>
+                    <a href="">Remove</a> 
+                </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$120.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/item5.jpg" alt="" width="100px" height="100px">
+                <div>
+                    <p>Grey Suede Chair</p>
+            
+                    <small>Price: $90.00</small>
+                    <br>
+                    <a href="">Remove</a> 
+                </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$90.00</td>
+        </tr>
+    
+    </table>
+
+
+<div class="total-price">
+    <table>
+        <tr>
+            <td>Subtotal</td>
+            <td>210.00</td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>$45.00</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>$255.00</td>
+        </tr>
+    
+    </table>
+
+</div>
+
+<div class="small-container checkout">
+  <a href="" class="checkout-btn">Continue to Checkout &#8594; </a>
+      
+</div>
+
+
+</div>
+
+<!------------Footer----------------->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col1">
+                <h3>Download Our App</h3>
+                <p>Download our mobile app availble on iOS and Android!</p>  
+                <div class="app-logo">
+                    <img src="images/appstore.png" alt="" width="300px">
+                   
+                </div>
+            </div>
+            <div class="footer-col2">
+                <img src="images/white-cozelogo.png" alt="" width= "200px">
+        <br>
+                <p>Where quality meets Coze.</p>
+              
+            </div>
+            <div class="footer-col3">
+                <h3>Helpful Links</h3>
+                <ul>
+                    <li>Promos</li>
+                    <li>Blog</li>
+                    <li>Return Policy</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="footer-col4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Pinterest</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>Copyright 2022 - COZE</p>
+        </div>
+    
+    </div>
+</div>
+
+<!---------------- js for toggle menu icon--------------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle(){
+        if ( MenuItems.style.maxHeight == "0px")
+        {
+        MenuItems.style.maxHeight = "200px";}
+        else { MenuItems.style.maxHeight = "0px";}
+    }
+</script>
+<!----------------js for product gallery------------------->
+
+<script>
+
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function(){
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function(){
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function(){
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function(){
+            ProductImg.src = SmallImg[3].src;
+        }
+        
+
+</script>
+
+
+
+</body>
+</html>
